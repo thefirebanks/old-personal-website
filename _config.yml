@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome MY DUDE
+title: Daniel
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -32,16 +32,6 @@ github_username:  jekyll
 minimal_mistakes_skin: "neon"
 logo: "/assets/images/bear_icon.png"
 masthead_title: "Is this... a bear?"
-header: "/assets/images/headeeer.png"
-
-defaults:
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: splash
-      author_profile: true
 
 author:
   name: "Your Name"
@@ -63,12 +53,33 @@ author:
       url: "https://instagram.com/mmistakes"
 
 
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+
+
 # Build settings
 # theme: minimal-mistakes-jekyll
+include: 
+  - "_pages"
+  - "_data"
 remote_theme: "mmistakes/minimal-mistakes@4.19.3"
 plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+
 port: 4444
 
 # Exclude from processing.
