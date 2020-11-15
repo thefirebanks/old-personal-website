@@ -13,4 +13,4 @@ jobs:
       - name: Safe space - action step
         uses: charliegerard/safe-space@master
         with:
-          GITHUB_TOKEN: 6097a158b2afa23e6dd07410f7f81d7f82f8b619
+          GITHUB_TOKEN: ${{ secrets.SILLYHEAD_TOKEN }}
